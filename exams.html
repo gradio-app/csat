@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html id="course">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSAT</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150995863-1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-150995863-1');</script>
+  </head>
+  <body>
+    <div id="body-wrap">
+      <header>
+        <div class="container">
+          <a href="index.html"><h1 class="primary">CSAT</h1></a>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#contact-box">Register for an Exam</a>
+            <a href="exams.html" class="selected">Exam Structure</a>
+            <a href="practice.html">Practice Exams</a>
+            <a href="recruit.html">Recruit</a>
+            </nav>
+        </div>
+      </header>
+      <main class="course">
+        <div class="container shadow" id="main-page">
+          <div class="ui horizontal divider">
+            Exam Structure
+          </div>
+          <h3 class="ui header">Section I: Algorithms</h3>
+          <p>The algorithms section consists of 4 questions over 2 hours worth 10 points each. In each of these questions, a function description and signature will be provided. Test cases to demonstrate function behaviour will also be provided. Candidates must implement each function with efficient time and space complexity, and also provide a complexity assessment of their own solution.</p>
+          <p>Each question will be graded with the following scoring rubric:</p>
+          <ul>
+            <li>Valid, functional solution: 3 pts.</li>
+            <li>Correct assessment of complexities: 1 pt.</li>
+            <li>Use of optimal implementation: 6 pts.</li>
+          </ul>
+          <p>The first 3 points are awarded on whether the candidate solution satisfies the function description. If it fails to do so, the remaning 7 points will not be considered.</p>
+          <p>The questions will cover the following topics:</p>
+          <ul class="three-col">
+            <li>Arrays</li>
+            <li>Stacks &amp; Queues</li>
+            <li>Sets</li>
+            <li>Linked Lists</li>
+            <li>Hash Tables</li>
+            <li>Trees</li>
+            <li>Graphs</li>
+            <li>Sorting</li>
+            <li>Searching</li>
+            <li>Recursion &amp; Dynamic Programming</li>
+            <li>Space &amp; Time Complexities</li>
+          </ul>
+          <h3 class="ui header">Section II: Feature Implementation</h3>
+          <p>This section will provide access to an existing codebase in an online editor along with documentation. The candidate will be asked to make changes to the codebase, including implementing new features, refactoring code, fixing bugs, and adding tests. The diff made on the codebase will be scored as follows:</p>
+          <ul>
+            <li>Valid, functional implementation of requested features: 25 pts.</li>
+            <li>Optimal implementation: 5 pts.</li>
+            <li>Clean, highly readable code: 5 pts.</li>
+            <li>Test coverage for added features: 5 pts.</li>
+          </ul>
+          <p>Clean code refers to code that is intuitive and easy to follow. Tips to score well here include: using clear variable and function names, dividing logic intuitively between functions, avoiding excessive nesting, avoiding hard coded values, following existing conventions used in the code, and sparse use of comments when necessary. Any new features should have appropriate test coverage, and any breaking tests after changes should be updated.</p>
+        </div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="script/sp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script>
+      $('.ui.dropdown').dropdown();
+      api.getClassDates(function loadDates(dates) {
+        var start_open = moment(dates.open.sort()[0], "YYYYMMDD");
+        var end_open = moment(dates.open.sort()[dates.open.length-1], "YYYYMMDD");
+        $(".open_date_1").html(start_open.format("MMMM DD"));
+        $(".open_date_2").html(end_open.format("MMMM DD"));
+      });
+      $("#location").text(api.getLocation());
+    </script>
+  </body>
+</html>

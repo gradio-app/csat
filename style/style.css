@@ -1,0 +1,226 @@
+body {
+  overflow-y: scroll;
+}
+main {
+  padding: 0px 30px !important;
+}
+.container {
+  padding: 15px 30px 0px !important;
+}
+#exercises_nav {
+  padding-top: 15px;
+  margin-bottom: 12px;
+}
+.exercise_link {
+  margin-right: 15px !important;
+  margin-bottom: 12px !important;
+}
+.exercise_link.green {
+  background-color: #21ba45 !important;
+}
+.problem {
+  margin-bottom: 20px;
+  display: flex;
+}
+.problem_box, .render_box {
+  width: 600px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.render_box {
+  margin-left: 20px !important;
+  min-height: 300px !important;
+}
+.output_box {
+  display: none;
+}
+.render_box iframe {
+  width: 100%;
+  height: calc(100% - 30px);
+  border: none;
+}
+.exercise_set {
+  display: none;
+}
+.question-number {
+  margin-bottom: 12px;
+}
+.question img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.question {
+  color: black;
+}
+.answers {
+  margin-top: 12px;
+}
+.white_canvas {
+  margin-bottom: 12px;
+}
+.answers > .buttons {
+  width: 100%;
+}
+.choice {
+  text-align: left !important;
+}
+#top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px
+}
+#name {
+  opacity: 1 !important;
+}
+#slides {
+  justify-content: center;
+  display: flex;
+  height: calc(100vh - 177px);
+  min-height: 300px;
+}
+.slide {
+  display: none;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border: solid 1px #EEEEEE;
+  background-color: #EEEEEE;
+}
+#slide_control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#slide_control button {
+  margin: 0px 6px !important;
+}
+#slide_control input {
+  text-align: center;
+  width: 60px;
+  margin-right: 6px !important;
+}
+#exercises {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 12px;
+}
+.no_message, .yes_message {
+  display: none;
+}
+.test_header {
+  margin: 10px 0;
+  font-weight: bold;
+}
+/* PROBLEMS */
+.problem code {
+  display: block;
+  background: #EEE;
+  padding: 4px;
+  margin: 4px 0;
+  border: solid 1px #BBB;
+  border-radius: 2px;
+  user-select: none;
+  white-space: pre;
+  overflow-x: auto;
+}
+.test_code {
+  user-select: auto !important;
+}
+.problem textarea {
+  width: 100%;
+}
+.lang_link {
+  text-transform: uppercase !important;
+  cursor: pointer;
+}
+.run_code {
+  margin-top: 10px !important;
+}
+.codebox_holder {
+  display: none;
+}
+
+
+@media (min-width: 641px) {
+  header {
+    position: relative;
+  }
+  header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 700px;
+      background: #F5F5F5;
+      -webkit-transform-origin: 0;
+      transform-origin: 0;
+      -webkit-transform: skewY(-12deg);
+      transform: skewY(-12deg);
+      z-index: -1;
+  }
+}
+.slide {
+  box-shadow: 0px 12px 34px -21px black;
+}
+
+
+/* CODE MIRROR */
+.CodeMirror {
+  cursor: text;
+  border-left: solid 1px #d4d4d5;
+}
+/* EDITOR */
+.editor {
+  padding-bottom: 15px;
+  width: 100%;
+  height: calc(100% - 120px);
+
+}
+.editor .input, .output {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 100%;
+}
+.output {
+  padding-left: 15px;
+  overflow-y: scroll;
+  background-repeat: repeat;
+}
+textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 14px !important;
+  font-family: monospace !important;
+}
+.editor .add_hint {
+  display: none !important;
+}
+.hint {
+  display: none;
+}
+.open_max {
+  width: 100%;
+  height: 20px;
+  text-align: right;
+  opacity: 0.7;
+}
+.open_max img {
+  cursor: pointer;
+  height: 100%;
+}
+.code_answer {
+  display: none;
+  margin-top: 18px;
+}
+
+.visible {
+  display: block !important;
+}
+.invisible {
+  display: none !important;
+}

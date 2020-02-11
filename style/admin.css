@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+#students {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+  overflow-y: auto;
+}
+#students > button {
+  margin: 0 8px !important;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html id="course">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSAT</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150995863-1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-150995863-1');</script>
+  </head>
+  <body>
+    <div id="body-wrap">
+      <header>
+        <div class="container">
+          <a href="index.html"><h1 class="primary">CSAT</h1></a>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#contact-box">Register for an Exam</a>
+            <a href="exams.html">Exam Structure</a>
+            <a href="practice.html">Practice Exams</a>
+            <a href="recruit.html" class="selected">Recruit</a>
+            </nav>
+        </div>
+      </header>
+      <main class="course">
+        <div class="container shadow" id="main-page">
+          <div class="ui horizontal divider">
+            Recruit
+          </div>
+          <p>The CSAT organization maintains a curated list of candidates who scored well on the CSAT and have opted to be contacted by recruiters. For access to our list of candidates and resumes, please contact us below: </p>
+          <div class="container" id="contact-box">
+            <h3>Recruiter Contact Form.</h3>
+            <p>Please provide your information below and CSAT will contact you shortly.</p>
+            <form class="ui form" method="POST" action="https://formspree.io/aliabid94@gmail.com">
+              <div class="field">
+                <label>Name</label>
+                <div class="two fields">
+                  <div class="field">
+                    <input type="text" name="first" placeholder="First Name">
+                  </div>
+                  <div class="field">
+                    <input type="text" name="last" placeholder="Last Name">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Contact</label>
+                <div class="two fields">
+                  <div class="field">
+                    <input type="text" name="email" placeholder="Email">
+                  </div>
+                  <div class="field">
+                    <input type="text" name="phone" placeholder="Phone Number">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Organization</label>
+                <div class="two fields">
+                  <div class="field">
+                    <input type="text" name="org" placeholder="Company Name">
+                  </div>
+                  <div class="field">          
+                    <input type="text" name="size" placeholder="Company Size">
+                  </div>
+                </div>
+              </div>
+              <button class="ui teal button" type="submit" id="submit">Submit</button>  
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="script/sp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script>
+      $('.ui.dropdown').dropdown();
+      api.getClassDates(function loadDates(dates) {
+        var start_open = moment(dates.open.sort()[0], "YYYYMMDD");
+        var end_open = moment(dates.open.sort()[dates.open.length-1], "YYYYMMDD");
+        $(".open_date_1").html(start_open.format("MMMM DD"));
+        $(".open_date_2").html(end_open.format("MMMM DD"));
+      });
+      $("#location").text(api.getLocation());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html id="course">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSAT</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150995863-1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-150995863-1');</script>
+  </head>
+  <body>
+    <div id="body-wrap">
+      <header>
+        <div class="container">
+          <a href="index.html"><h1 class="primary">CSAT</h1></a>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#contact-box">Register for an Exam</a>
+            <a href="exams.html">Exam Structure</a>
+            <a href="practice.html" class="selected">Practice Exams</a>
+            <a href="recruit.html">Recruit</a>
+            </nav>
+        </div>
+      </header>
+      <main class="course">
+        <div class="container shadow" id="main-page">
+          <div class="ui horizontal divider">
+            Practice / Past Exams
+          </div>
+          <label>Language:</label>
+          <div id="course_select" class="ui floating dropdown">
+            <div class="text">Python</div> <i class="dropdown icon" id="langs-dd"></i>
+            <div class="menu">
+              <div class="item">Python</div>
+              <div class="item">Javascript</div>
+              <div class="item">C++</div>
+              <div class="item">Java</div>
+              <div class="item">Go</div>
+            </div>
+          </div>
+          <h3 class="ui header teal">Practice Exam 1</h3>
+          <a href="#"><button class="ui button basic">Section I</button></a>
+          <a href="#"><button class="ui button basic">Section II</button></a>
+          <div class="btn-divider">&nbsp;</div>
+          <a href="#"><button class="ui button basic">Section I Solution</button></a>
+          <a href="#"><button class="ui button basic">Section II Solution</button></a>
+          <h3 class="ui header teal">Practice Exam 2</h3>
+          <a href="#"><button class="ui button basic">Section I</button></a>
+          <a href="#"><button class="ui button basic">Section II</button></a>
+          <div class="btn-divider">&nbsp;</div>
+          <a href="#"><button class="ui button basic">Section I Solution</button></a>
+          <a href="#"><button class="ui button basic">Section II Solution</button></a>
+          <h3 class="ui header teal">Practice Exam 3</h3>
+          <a href="#"><button class="ui button basic">Section I</button></a>
+          <a href="#"><button class="ui button basic">Section II</button></a>
+          <div class="btn-divider">&nbsp;</div>
+          <a href="#"><button class="ui button basic">Section I Solution</button></a>
+          <a href="#"><button class="ui button basic">Section II Solution</button></a>
+          <h3 class="ui header teal">Practice Exam 4</h3>
+          <a href="#"><button class="ui button basic">Section I</button></a>
+          <a href="#"><button class="ui button basic">Section II</button></a>
+          <div class="btn-divider">&nbsp;</div>
+          <a href="#"><button class="ui button basic">Section I Solution</button></a>
+          <a href="#"><button class="ui button basic">Section II Solution</button></a>
+          <h3 class="ui header teal">Practice Exam 5</h3>
+          <a href="#"><button class="ui button basic">Section I</button></a>
+          <a href="#"><button class="ui button basic">Section II</button></a>
+          <div class="btn-divider">&nbsp;</div>
+          <a href="#"><button class="ui button basic">Section I Solution</button></a>
+          <a href="#"><button class="ui button basic">Section II Solution</button></a>
+        </div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="script/sp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script>
+      $('.ui.dropdown').dropdown();
+      api.getClassDates(function loadDates(dates) {
+        var start_open = moment(dates.open.sort()[0], "YYYYMMDD");
+        var end_open = moment(dates.open.sort()[dates.open.length-1], "YYYYMMDD");
+        $(".open_date_1").html(start_open.format("MMMM DD"));
+        $(".open_date_2").html(end_open.format("MMMM DD"));
+      });
+      $("#location").text(api.getLocation());
+    </script>
+  </body>
+</html>

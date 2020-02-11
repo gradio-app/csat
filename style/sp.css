@@ -1,0 +1,219 @@
+a {
+  font-weight: bold !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #00b5ad;
+}
+html, body {
+  height: auto !important;
+  padding-bottom: 40px;
+}
+body > * {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.sign_up_banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #00b5ad;
+  color: white;
+}
+.sign_up_banner a {
+  color: white !important;
+  text-decoration:underline !important;
+  text-decoration-style: dotted !important;
+}
+nav {
+  height: 50px;
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 5px;
+}
+nav a {
+  font-size: 16px;
+  padding: 14px 15px;
+  color: #BBBBBB;
+  box-sizing: border-box;
+  border-bottom: solid 2px white;
+}
+nav a.selected, nav a:hover {
+  border-bottom: solid 2px #00b5ad;
+  color: #00b5ad;
+}
+.banner {
+  background-size: cover;
+  min-height: 400px;
+  background-color: #837960;
+  background-image: linear-gradient(
+    to top, rgba(255, 255, 255, 0.5), white
+  ), url("https://images.pexels.com/photos/1661004/pexels-photo-1661004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+}
+.banner h1 {
+  margin-top: 30px !important;
+  font-size: 54px;
+}
+.banner h2 {
+  margin-top: 0px !important;
+}
+.banner button {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+.content {
+  font-size: 15px;
+  margin-top: 12px;
+}
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.info {
+  margin-right: 20px;
+  flex: 2 0 320px;
+}
+.contact {
+  flex: 1 0 180px;
+}
+.contact, .info, .form {
+  margin-top: 10px;
+}
+p {
+  line-height: 1.8em !important;
+}
+.content h2 {
+  font-size: 30px;
+}
+
+/* CLASSES */
+.legend > div {
+  display: inline-block;
+  width: 20px;
+  margin-right: 8px;
+  height: 16px;
+  border-radius: 2px;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px;
+}
+.legend_title {
+  font-size: 16px;
+  color: #BBB;
+  margin-right: 16px;
+}
+.active_color, .day_marker.active {
+  background-color: #00b5ad;
+}
+.open_color, .day_marker.open {
+  background-color: #f2711c
+}
+.today_color, .day.today {
+  background-color: #CCC
+}
+
+.calendar_row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendar {
+  border: solid 2px #00b5ad;
+  display: inline-block;
+  border-radius: 2px;
+  vertical-align: top;
+  margin-right: 18px;
+  margin-bottom: 12px;
+}
+.calendar:last-child {
+  margin-right: 0;
+}
+.calendar_row .button {
+  margin: 9px !important;
+}
+.month, .day_name {
+  background-color: #00b5ad;
+  padding: 2px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.day_name, .day {
+  display: inline-block;
+  width: 36px;
+}
+.day_name {
+  height: 28px;
+}
+.day {
+  position: relative;
+  height: 34px;
+  vertical-align: top;
+  font-size: 9px;
+  color: #BBB;
+  padding: 0px important;
+  border-top: solid 1px #EEE;
+  border-right: solid 1px #EEE;
+}
+.day_marker {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  color: white;
+}
+.day.today {
+  color: white;
+  font-weight: bold;
+}
+.class {
+  margin-top: 0px !important;
+  padding-top: 15px !important;
+  color: black;
+}
+.class > * {
+  vertical-align: bottom !important;
+}
+.class_number {
+  display: inline-block;
+  background-color: #00b5ad;
+  font-size: 14px;
+  color: white;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  margin-right: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  margin-bottom: 18px;
+}
+@media only screen and (max-width: 480px) {
+  .calendar_row button {
+    display: none !important;
+  }
+  .calendar {
+    margin-right: 0 !important;
+  }
+  .calendar_set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .course button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,167 @@
+﻿<html lang="en" id="index">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSAT</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="style/index.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150995863-1"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-150995863-1');</script>
+</head>
+<body>
+  <div id="body-wrap">
+    <header>
+      <div class="container">
+        <a href="#"><h1 class="primary">CSAT</h1></a>
+        <nav>
+          <a href="#" class="selected">Home</a>
+          <a href="#contact-box">Register for an Exam</a>
+          <a href="exams.html">Exam Structure</a>
+          <a href="practice.html">Practice Exams</a>
+          <a href="recruit.html">Recruit</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h1><span class="primary">CSAT</span> Exam for <span class="secondary">Software Engineers</span>.</h1>
+            <p>The CSAT Exam assesses competence of individuals in modern software programming. </p> 
+            <p>The exam focuses on algorithms, designs, and practices specifically relevant to software development used in industry today. CSAT aims to provide a transparent signal of engineering ability of individuals without bias towards background.</p> 
+            <a href="#contact-box"><button id="register-link" class="ui button teal small">Register for an Exam</button id="contact-link"></a>
+            <a href="practice.html"><button id="practice-link" class="ui button basic teal small">Practice Exams</button id="contact-link"></a>
+          </div>
+          <div class="hero-figure">
+            <div id="display-screen" class="shadow">
+              <div id="rubric-holder">
+                <h4 class="primary">Exam Overview</h4>
+                <div id="exam-overview">
+                  <div class="exam-info">
+                    <img src="images/time.svg">
+                    <span class="secondary"><strong>Time</strong>: 4 hours</span>
+                  </div>
+                  <div class="exam-info">
+                    <img src="images/score.svg">
+                    <span class="secondary"><strong>Score</strong>: 0 - 80 pts.</span>
+                  </div>
+                </div>
+                <h5 class="secondary">Section I: Algorithms</h5>
+                <small>2 hours, 4 questions, worth 10 points each</small>
+                <p>In each question, a function description and signature are provided with test cases. Candidate must provide an efficient implementation.</p>
+                <h5 class="secondary">Section II: Feature Implementation</h5>
+                <small>2 hours, worth 40 points</small>
+                <p>Provided an existing codebase, the candidate must implement a requested set of features.</p>
+              </div>
+            </div>           
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="header">
+            <h2>Assessment Goals of CSAT</h2>
+            <p>CSAT aims to ensure a level field for hiring software talent by measuring the skills most relevant to modern software engineering. CSAT measures three engineering skills:</p>
+          </div>
+          <div id="statements">
+            <div class="statement">
+              <img src="images/algorithm.svg">
+              <h4>Working with Algorithms and Data Structures</h4>
+              <p>CSAT measures a candidate's proficiency with implementing efficient algorithms. 
+              Given a function description and example test cases, the candidate is asked to write the function body and assess the space and time complexities of their own implementation. </p>
+              <p>Efficient solutions will require a strong understanding of data structures.</p>
+            </div>
+            <div class="statement">
+              <img src="images/docs.svg">
+              <h4>Reading Codebases and Documentation</h4>
+              <p>In Section II of the exam, the candidate must familiarize themselves with an existing codebase by browsing through the code and available documentation.</p>
+              <p>Reading code is an essential skill for software engineers that translates strongly into productive engineering.</p>
+            </div>
+            <div class="statement">
+              <img src="images/code.svg">
+              <h4>Writing Quality Code</h4>
+              <p>The candidate will be graded on their diff to the codebase in Section II. In addition to implementing features, they may be required to refactor existing sections, clean bugs, and provide test cases.</p>
+              <p>The overall diff will be given points for completeness of implementation and quality of code written. CSAT rewards the ability of a candidate to maintain a healthy codebase.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" id="contact-box">
+          <h3>Register for an Exam.</h3>
+          <p>The CSAT is currently offered in eight cities in the United States. Please provide your contact details and we'll inform you the time and location the next exam will be available.</p>
+          <form class="ui form" method="POST" action="https://formspree.io/aliabid94@gmail.com">
+            <div class="field">
+              <label>Name</label>
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" name="first" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <input type="text" name="last" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Contact</label>
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" name="email" placeholder="Email">
+                </div>
+                <div class="field">
+                  <input type="text" name="phone" placeholder="Phone Number">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Background</label>
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" name="profession" placeholder="Student / Profession">
+                </div>
+                <div class="field">          
+                  <div class="ui fluid search selection dropdown">
+                    <input type="hidden" name="country">
+                    <i class="dropdown icon"></i>
+                    <input class="search" autocomplete="off" tabindex="0"><div class="default text">Nearest City</div>
+                    <div class="menu" tabindex="-1">
+                      <div class="item" data-value="au">Austin, TX</div>
+                      <div class="item" data-value="at">Atlanta, GA</div>
+                      <div class="item" data-value="bo">Boston, MA</div>
+                      <div class="item" data-value="ch">Chicago, IL</div>
+                      <div class="item" data-value="la">Los Angeles, CA</div>
+                      <div class="item" data-value="ny">New York City, NY</div>
+                      <div class="item" data-value="sf">San Francisco, CA</div>
+                      <div class="item" data-value="se">Seattle, WA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="ui teal button" type="submit" id="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script>
+    var slide = 0;
+    var SLIDE_COUNT = 2;
+    $('.ui.dropdown').dropdown();
+    function load_slide() {
+      $(".slide").hide();
+      $(".slide[slide='"+ (slide+1) + "']").show();  
+    }
+    $("#left").click(function() {
+      slide = (slide - 1 + SLIDE_COUNT) % SLIDE_COUNT;
+      load_slide();
+    });
+    $("#right").click(function() {
+      slide = (slide + 1 + SLIDE_COUNT) % SLIDE_COUNT;
+      load_slide();
+    });
+  </script>
+</body>
+</html>
